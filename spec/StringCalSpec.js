@@ -25,8 +25,8 @@ describe("String Calculator", function(){
   expect(result).toBe(33);
 })
 
-it("should throw an exception for negative numbers", function(){
-  expect(() => { addNegative("-1, 2") }).toThrowError();
+it('should throw an exception when password is invalid', () => {  
+  expect(() => {add('-1, 2');}).toThrow(new SyntaxError("you cannot enter a negative number"));
 })
 
 it("should support multiple delimeters", function(){
